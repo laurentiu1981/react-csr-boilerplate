@@ -1,0 +1,33 @@
+
+body {
+  margin: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: initial;
+  border-color: initial;
+  border-image: initial;
+  margin: 0;
+  padding: 0;
+}
+
+strong {
+  font-weight: bold;
+}
+
