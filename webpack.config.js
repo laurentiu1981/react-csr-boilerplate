@@ -101,6 +101,16 @@ module.exports = (env, argv) => {
     },
     watchOptions: {
       ignored: /node_modules/,
+    },
+    "devServer": {
+      // every request made to 'locahost:8080/api/xxxx' will be proxyfied to 'http://localhost:5000/api/xxxx'
+      proxy: {
+        "/api/*": {
+          target: "http://localhost:5000",
+          secure: false,
+        },
+
+      }
     }
   }
 };

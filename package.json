@@ -12,7 +12,10 @@
     "analyse": "webpack --config=webpack.analyse.config.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "server": "node server",
+    "dev": "run-p server start",
+    "prod": "run-p build:prod server"
   },
   "author": "Laurentiu Lese",
   "license": "ISC",
@@ -36,14 +39,17 @@
     "@storybook/react": "^5.3.19",
     "babel-loader": "^8.1.0",
     "babel-plugin-require-context-hook": "^1.0.0",
+    "body-parser": "^1.19.0",
     "clean-webpack-plugin": "^3.0.0",
     "compression-webpack-plugin": "^4.0.0",
     "css-loader": "^3.5.3",
     "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
     "path": "^0.12.7",
     "react-hot-loader": "^4.12.21",
     "sass-loader": "^8.0.2",
@@ -54,5 +60,6 @@
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.11.0",
     "webpack-merge": "^4.2.2"
-  }
+  },
+  "proxy": "http://localhost:5000/"
 }
